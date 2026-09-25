@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 20px;
+        background: #f5f5f5;
+    }
+
+    /* A1 -> A6: mỗi ảnh một dòng */
+    .gallery-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    /* Giới hạn kích thước ảnh */
+    .gallery-main img {
+        width: 80%;
+        max-width: 1000px;
+        height: auto;
+        border-radius: 5px;
+        display: block;
+    }
+
+    /* Rau: 2 ảnh một dòng */
+    .gallery-rau {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .gallery-rau img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 5px;
+    }
+
+    /* Hiệu ứng hover */
+    .gallery-main img:hover,
+    .gallery-rau img:hover {
+        transform: scale(1.02);
+        transition: transform 0.3s ease;
+    }
+</style>
+
+<body>
+
+    <!-- A1 -> A6 -->
+    <div class="gallery-main">
+        <img src="images/anh1.jpg" alt="Ảnh 1">
+        <img src="images/anh2.png" alt="Ảnh 2">
+        <img src="images/anh3.jpg" alt="Ảnh 3">
+        <img src="images/anh4.png" alt="Ảnh 4">
+        <img src="images/anh5.png" alt="Ảnh 5">
+        <img src="images/anh6.jpg" alt="Ảnh 6">
+    </div>
+
+    <!-- Rau -->
+    <div class="gallery-rau">
+        <img src="images/Rau1.jpg" alt="Rau 1">
+        <img src="images/Rau2.jpg" alt="Rau 2">
+        <img src="images/Rau3.jpg" alt="Rau 3">
+        <img src="images/Rau4.jpg" alt="Rau 4">
+    </div>
+
+</body>
+
+</html>
